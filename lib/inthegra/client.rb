@@ -12,14 +12,11 @@ module Inthegra
       end
     end
 
+    # Authenticate the client and set the auth_token
+    # @return Authtoken 
     def authenticate
-      post('signin', { email: email, password: password })
-    end
-
-    def request_new_token
-      token = authenticate
-
-      self.auth_token = token["token"]
+      response = post('signin', { email: email, password: password })
+      self.auth_token = AuthToken.new(response)
     end
 
     include Connection

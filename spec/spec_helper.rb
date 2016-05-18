@@ -1,6 +1,7 @@
 require 'simplecov'
 SimpleCov.start do
   add_group 'Inthegra', 'lib/inthegra'
+  add_group 'Inthegra Model', 'lib/model'
   add_group 'Specs', 'spec'
 end
 

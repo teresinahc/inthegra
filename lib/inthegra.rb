@@ -9,6 +9,9 @@ require 'inthegra/connection'
 require 'inthegra/request'
 require 'inthegra/client'
 
+require 'inthegra/model/base'
+require 'inthegra/model/auth_token'
+
 module Inthegra
   extend Configuration
 end

@@ -3,7 +3,7 @@ module FaradayMiddleware
 
     def call(env)
       if @auth_token
-        env[:request_headers] = env[:request_headers].merge('X-Auth-Token' => @auth_token)
+        env[:request_headers] = env[:request_headers].merge('X-Auth-Token' => @auth_token.token)
       end
 
       @app.call env

@@ -14,10 +14,10 @@ describe Inthegra::Client do
     end
 
     it 'should get the correct response' do
-      response = client.authenticate
+      auth_token = client.authenticate
 
-      expect(response).to be_a Hash
-      expect(response['token']).to eq('87d19cf0-59f1-434b-9250-54b35902154c')
+      expect(auth_token).to be_a Inthegra::AuthToken
+      expect(client.auth_token.token).to eq('87d19cf0-59f1-434b-9250-54b35902154c')
     end
 
   end
