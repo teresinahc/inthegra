@@ -14,6 +14,7 @@ module Inthegra
 
     def set_new_token
       token = post('signin', { email: email, password: password })
+      
       self.auth_token = token["token"]
     end
 
