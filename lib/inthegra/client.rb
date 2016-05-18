@@ -1,5 +1,13 @@
+
+
 module Inthegra
   class Client
+    Dir[File.expand_path('../client/*.rb', __FILE__)].each{|f| require f}
+
+    include Connection
+    include Request
+
+    include Lines
 
     attr_accessor *Configuration::VALID_OPTIONS
 
@@ -13,13 +21,10 @@ module Inthegra
     end
 
     # Authenticate the client and set the auth_token
-    # @return Authtoken 
+    # @return Authtoken
     def authenticate
       response = post('signin', { email: email, password: password })
       self.auth_token = AuthToken.new(response)
     end
-
-    include Connection
-    include Request
   end
 end

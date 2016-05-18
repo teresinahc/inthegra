@@ -11,6 +11,10 @@ require 'inthegra/client'
 
 require 'inthegra/model/base'
 require 'inthegra/model/auth_token'
+require 'inthegra/model/line'
+
+require 'inthegra/serializer/base'
+require 'inthegra/serializer/collection'
 
 module Inthegra
   extend Configuration
