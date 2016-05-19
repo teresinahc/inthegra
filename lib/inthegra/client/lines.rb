@@ -1,21 +1,25 @@
 module Inthegra
   class Client
+    # Define methods related to lines
     module Lines
 
-      # GET /lines
-      # Get all lines filling it to a model
-      # and returning a array
-      # @return [Array] Array of Line objects
+      # Return a list of all lines
+      #
+      # @return [Array::Line] All lines
+      # @authenticated true
+      # @see https://inthegra.strans.teresina.pi.gov.br/docs#linhas
       def lines
         response = get('linhas')
 
         CollectionSerializer.parse(response, Line)
       end
 
-      # GET /lines?busca=query
-      # Search lines by the query passed
-      # @param [String] search query
-      # @return [Array] Array of Line objects
+      # Return a list of all searched lines
+      #
+      # @param query [String] An search query
+      # @return [Array::Line] All lines
+      # @authenticated true
+      # @see https://inthegra.strans.teresina.pi.gov.br/docs#linhas
       def line_search(query)
         response = get('linhas', { busca: URI::encode(query) })
 
