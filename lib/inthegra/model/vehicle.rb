@@ -1,5 +1,5 @@
 module Inthegra
-  class Vehicles < BaseModel
+  class Vehicle < BaseModel
 
     # @return [Integer] code of identification
     attr_reader :code
@@ -14,7 +14,7 @@ module Inthegra
     attr_reader :hour
 
     private
-    def fill
+    def fill(data)
       @code = data["CodigoVeiculo"]
       @lat = data["Lat"]
       @long = data["Long"]
