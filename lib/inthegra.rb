@@ -14,6 +14,7 @@ require 'inthegra/client'
 require 'inthegra/model/base'
 require 'inthegra/model/auth_token'
 require 'inthegra/model/line'
+require 'inthegra/model/bus_stop'
 
 require 'inthegra/serializer/base'
 require 'inthegra/serializer/collection'

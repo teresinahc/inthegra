@@ -8,6 +8,7 @@ module Inthegra
     include Request
 
     include Lines
+    include BusStops
 
     attr_accessor *Configuration::VALID_OPTIONS
 
