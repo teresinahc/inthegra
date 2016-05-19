@@ -1,16 +1,16 @@
 module Inthegra
   class Vehicles < BaseModel
 
-    # vehicle code
+    # @return [Integer] code of identification
     attr_reader :code
 
-    # latitude of vehicle
+    # @return [String] current vehicle latitude
     attr_reader :lat
 
-    # longitude of vehicle
+    # @return [String] current vehicle longitude
     attr_reader :long
 
-    # last update
+    # @return [Time] last data update
     attr_reader :hour
 
     private

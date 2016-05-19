@@ -1,15 +1,18 @@
 module Inthegra
+  # Generic serialize class
   class BaseSerializer
 
-    # Store the input data
+    # @return [Array:Hash] the input data
     attr_reader :input
 
-    # Store the output data
+    # @return [Array:BaseModel] the output data
     attr_reader :output
 
-    # Store the model type
+    # @return [BaseModel] the model of collection
     attr_reader :model
 
+    # Initialize the serializer passing a input data and a model
+    #
     # @param input [String] The input data
     # @param model [String] The resource model
     def initialize(data, model)
@@ -23,9 +26,12 @@ module Inthegra
       @input = data
     end
 
-    # Decorator method for the class
+    # Decorator method for the serializer
+    #
     # @param input [String] The input data
-    # @param model [String] The model type
+    # @param model [String] the model of collection
+    # @example  Parse a line response
+    #   Inthegra::CollectionSerializer(response, Inthegra::Line)
     def self.parse(input, model)
       @output = new(input, model).parse
     end

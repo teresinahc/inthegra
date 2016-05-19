@@ -1,6 +1,7 @@
 require 'faraday_middleware'
 
 module Inthegra
+  # Wrapper for the faraday connection
   module Connection
     private
 
@@ -18,7 +19,7 @@ module Inthegra
       Faraday.new(options) do |connection|
         connection.use FaradayMiddleware::Inthegra, auth_token
         connection.use Faraday::Response::ParseJson
-        
+
         connection.adapter :net_http
       end
     end

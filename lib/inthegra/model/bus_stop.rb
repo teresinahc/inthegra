@@ -1,19 +1,19 @@
 module Inthegra
   class BusStop < BaseModel
 
-    # the token hash
+    # @return [Integer] code of identification
     attr_reader :code
 
-    # token expiration date
+    # @return [String] where the bus stop is
     attr_reader :name
 
-    # token expiration date
+    # @return [String] full address of bus stop
     attr_reader :address
 
-    # token expiration date
+    # @return [String] latitude of the bus stop
     attr_reader :lat
 
-    # token expiration date
+    # @return [String] longitude of the bus stop
     attr_reader :long
 
     private

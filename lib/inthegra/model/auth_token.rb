@@ -1,10 +1,10 @@
 module Inthegra
   class AuthToken < BaseModel
 
-    # the token hash
+    # @return [String] the auth token
     attr_reader :token
 
-    # token expiration date
+    # @return [Time] time when the token expire
     attr_reader :expires_in
 
     private

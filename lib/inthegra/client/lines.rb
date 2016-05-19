@@ -6,6 +6,8 @@ module Inthegra
       # Return a list of all lines
       #
       # @return [Array::Line] All lines
+      # @example Return all lines
+      #   Inthegra.lines
       # @authenticated true
       # @see https://inthegra.strans.teresina.pi.gov.br/docs#linhas
       def lines
@@ -18,6 +20,8 @@ module Inthegra
       #
       # @param query [String] An search query
       # @return [Array::Line] All lines
+      # @example Return a list of all lines localized in 'ininga' neighborhood
+      #   Inthegra.line_search('ininga')
       # @authenticated true
       # @see https://inthegra.strans.teresina.pi.gov.br/docs#linhas
       def line_search(query)

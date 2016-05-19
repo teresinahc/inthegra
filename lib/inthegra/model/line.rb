@@ -1,19 +1,19 @@
 module Inthegra
   class Line < BaseModel
 
-    # vehicle code
+    # @return [String] code of identification
     attr_reader :code
 
-    # latitude of vehicle
+    # @return [String] line name
     attr_reader :name
 
-    # longitude of vehicle
+    # @return [String] where the line starts
     attr_reader :first_stop
 
-    # last update
+    # @return [String] where the line stops
     attr_reader :last_stop
 
-    # last update
+    # @return [Boolean] if is a circular line
     attr_reader :circular
 
     private

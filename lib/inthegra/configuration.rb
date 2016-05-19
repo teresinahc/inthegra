@@ -1,6 +1,7 @@
 module Inthegra
   module Configuration
 
+    # Default options of the configuration module
     VALID_OPTIONS = [
       :email,
       :password,
@@ -16,6 +17,7 @@ module Inthegra
 
     DEFAULT_ENDPOINT = 'https://api.inthegra.strans.teresina.pi.gov.br/v1'
 
+    # Set default value when this methods is extented
     def self.extended(base)
       base.set_default_values
     end
@@ -28,6 +30,7 @@ module Inthegra
       self.endpoint = DEFAULT_ENDPOINT
     end
 
+    # Return the array of options
     def options
       VALID_OPTIONS.inject({}) do |option, key|
         option.merge!(key => send(key))
