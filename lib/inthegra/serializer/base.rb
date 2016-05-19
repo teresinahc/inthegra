@@ -12,13 +12,15 @@ module Inthegra
 
     # @param input [String] The input data
     # @param model [String] The resource model
-    def initialize(input, model)
-      unless input.is_a?(Array)
-        raise InvalidSerializerInput.new
+    def initialize(data, model)
+      data ||= []
+
+      unless data.is_a?(Array)
+        raise InvalidSerializerInput, "The data is a #{data.class} and not a Array type"
       end
 
       @model = model
-      @input = input
+      @input = data
     end
 
     # Decorator method for the class

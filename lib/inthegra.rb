@@ -1,6 +1,8 @@
 require "json/ext"
 require "faraday"
 
+require "inthegra/error"
+
 require "faraday/inthegra"
 
 require "inthegra/version"
