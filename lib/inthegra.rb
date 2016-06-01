@@ -1,3 +1,4 @@
+require "time"
 require "json/ext"
 require "faraday"
 
