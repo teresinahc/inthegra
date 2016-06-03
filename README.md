@@ -97,6 +97,10 @@ Searching vehicles of the 402 line code.
 client.vehicles_by_line('0402')
 ```
 
+## Documentation
+
+You can see then documentation in http://www.rubydoc.info/gems/inthegra/0.1.0.
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests.
