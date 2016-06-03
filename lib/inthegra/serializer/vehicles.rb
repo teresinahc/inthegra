@@ -1,4 +1,3 @@
-require 'pp'
 module Inthegra
   class VehiclesSerializer < BaseSerializer
 
