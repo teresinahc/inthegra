@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "Inthegra"
   spec.description   = "Ruby wrapper for the STRANS-PI Inthegra API"
-  spec.homepage      = "http://teresinahc.org"
+  spec.homepage      = "https://github.com/teresinahc/inthegra"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
