@@ -47,6 +47,56 @@ Now you can retrieve the API data.
 client.vehicles
 ```
 
+### Get all lines
+
+```ruby
+client.lines
+```
+
+### Search line by query string
+
+Searching all line with 'ininga' keyword.
+
+```ruby
+client.line_search('ininga')
+```
+
+### Get all bus stops
+
+```ruby
+client.bus_stops
+```
+
+### Search bus stops by query string
+
+Searching all bus stops with 'ininga' keyword.
+
+```ruby
+client.bus_stops_search('ininga')
+```
+
+### Search bus stops by line
+
+Searching all bus stops of the 402 line code.
+
+```ruby
+client.bus_stops_by_line('0402')
+```
+
+### Get vehicles
+
+```ruby
+client.vehicles
+```
+
+### Search vehicles by line
+
+Searching vehicles of the 402 line code.
+
+```ruby
+client.vehicles_by_line('0402')
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests.
