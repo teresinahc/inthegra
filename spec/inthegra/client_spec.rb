@@ -3,23 +3,24 @@ require 'spec_helper'
 describe Inthegra::Client do
 
   let(:client) do
-    Inthegra::Client.new(email: 'email@email.com', password: 'pwd123', api_key: '123')
+    Inthegra::Client.new(email: 'email@test.com', password: 'teste123', api_key: 'qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq')
   end
 
   describe '.authenticate' do
 
     before do
-      stub_post('signin')
-      .to_return(body: fixture('signin.json'), headers: { 'Content-Type': 'application/json', Date: Time.now.strftime("%a, %d %b %Y %H:%M:%S GMT"), 'X-Api-Key': client.api_key})
+      VCR.use_cassette('authenticate') do
+        auth_token
+      end
     end
 
-    it 'should get the correct response' do
-      auth_token = client.authenticate
-
-      expect(auth_token).to be_a Inthegra::AuthToken
-      expect(client.auth_token.token).to eq('87d19cf0-59f1-434b-9250-54b35902154c')
+    let :auth_token do
+      client.authenticate
     end
 
+    it "should return auth_token object" do
+      expect(auth_token).to be_an_instance_of(Inthegra::AuthToken)
+    end
   end
 
 end

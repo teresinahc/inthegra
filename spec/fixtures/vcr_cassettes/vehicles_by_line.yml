@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.inthegra.strans.teresina.pi.gov.br/v1/veiculosLinha?busca=0401
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 11 Jun 2016 16:06:10 GMT
+      X-Api-Key:
+      - qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      User-Agent:
+      - Faraday v0.9.2
+      X-Auth-Token:
+      - wwwwwwww-wwww-wwww-wwww-wwwwwwwwwwww
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 11 Jun 2016 19:06:11 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Language:
+      - pt
+      Connection:
+      - close
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '{"Linha":{"CodigoLinha":"0401","Denomicao":"UNIVERSIDADE","Origem":"COL.
+        AGRICOLA","Retorno":"PCA. BANDEIRA","Circular":true,"Veiculos":[{"CodigoVeiculo":"02208","Lat":"-5.06554700","Long":"-42.79358000","Hora":"16:05"}]}}'
+    http_version: 
+  recorded_at: Sat, 11 Jun 2016 19:06:11 GMT
+recorded_with: VCR 3.0.3

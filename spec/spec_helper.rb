@@ -2,38 +2,16 @@ require 'simplecov'
 SimpleCov.start do
   add_group 'Inthegra', 'lib/inthegra'
   add_group 'Inthegra Model', 'lib/model'
+  add_group 'Inthegra Client', 'lib/client'
   add_group 'Specs', 'spec'
 end
 
 require File.expand_path('../../lib/inthegra', __FILE__)
 
 require 'rspec'
-require 'webmock/rspec'
+require 'vcr'
 
-RSpec.configure do |config|
-  config.include WebMock::API
-end
-
-def a_get(path)
-  a_request(:get, "#{Inthegra.endpoint}/#{path}")
-end
-
-def a_post(path)
-  a_request(:post, "#{Inthegra.endpoint}/#{path}")
-end
-
-def stub_get(path)
-  stub_request(:get, "#{Inthegra.endpoint}/#{path}")
-end
-
-def stub_post(path)
-  stub_request(:post, "#{Inthegra.endpoint}/#{path}")
-end
-
-def fixture_path
-  File.expand_path("../fixtures", __FILE__)
-end
-
-def fixture(file)
-  File.new(fixture_path + '/' + file)
+VCR.configure do |config|
+  config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
+  config.hook_into :webmock
 end
