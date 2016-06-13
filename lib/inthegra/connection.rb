@@ -7,13 +7,13 @@ module Inthegra
 
     def connection
       options = {
-        :headers => {
+        headers: {
           "Content-Type": "application/json",
 					"Date": Time.now.strftime("%a, %d %b %Y %H:%M:%S GMT"),
 					"X-Api-Key": api_key,
-          "User-Agent" => user_agent
+          "User-Agent": user_agent
         },
-        :url => endpoint
+        url: endpoint
       }
 
       Faraday.new(options) do |connection|
