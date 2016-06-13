@@ -1,4 +1,9 @@
 # Inthegra
+<a href="https://travis-ci.org/teresinahc/inthegra"><img src="https://travis-ci.org/teresinahc/inthegra.svg?branch=master" /></a>
+
+<a href="https://codeclimate.com/github/teresinahc/inthegra"><img src="https://codeclimate.com/github/teresinahc/inthegra/badges/gpa.svg" /></a>
+
+<a href="https://codeclimate.com/github/teresinahc/inthegra/coverage"><img src="https://codeclimate.com/github/teresinahc/inthegra/badges/coverage.svg" /></a>
 
 Ruby wrapper for the STRANS-PI Inthegra API.
 
