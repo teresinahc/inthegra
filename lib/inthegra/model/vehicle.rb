@@ -4,6 +4,9 @@ module Inthegra
     # @return [Integer] code of identification
     attr_reader :code
 
+    # @return [Integer] code of line
+    attr_reader :line_code
+
     # @return [String] current vehicle latitude
     attr_reader :lat
 
@@ -16,6 +19,7 @@ module Inthegra
     private
     def fill(data)
       @code = data["CodigoVeiculo"]
+      @line_code = data["CodigoLinha"]
       @lat = data["Lat"]
       @long = data["Long"]
       @hour = Time.parse(data["Hora"])

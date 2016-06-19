@@ -5,9 +5,12 @@ module Inthegra
     # @return [Array] collection items
     def parse
       collection = []
+
       input.each do |line|
-        line['Linha']['Veiculos'].each do |vehicles|
-          collection << vehicles
+        line['Linha']['Veiculos'].each do |vehicle|
+          vehicle['CodigoLinha'] = line['Linha']['CodigoLinha']
+
+          collection << vehicle
         end
       end
 
