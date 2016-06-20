@@ -18,7 +18,7 @@ module Inthegra
 
     private
     def fill(data)
-      @code = data["CodigoParada"]
+      @code = data["CodigoLinha"]
       @name = data["Denomicao"]
       @origin = data["Origem"]
       @return = data["Retorno"]
