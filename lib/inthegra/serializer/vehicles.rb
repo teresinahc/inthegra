@@ -11,7 +11,7 @@ module Inthegra
           vehicle['CodigoLinha'] = line['Linha']['CodigoLinha']
 
           collection << vehicle
-        end
+        end if line['Linha'] and line['Linha']['Veiculos']
       end
 
       CollectionSerializer.parse(collection, model)
